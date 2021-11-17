@@ -10,6 +10,7 @@ import WebKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var view1: UIView!
+    @IBOutlet weak var view2: UIView!
     
     var webView: WKWebView!
     
@@ -17,10 +18,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //let v = CGRect(x: 0, y: 0, width: 414, height: 862)
+        //let view2 = CGRect(x: 0, y: 0, width: 414, height: 862)
         
         //WKWebViewを生成
-        webView = WKWebView(frame: CGRect(x: 0, y: 36, width: 414, height: 862))
+        webView = WKWebView(frame: CGRect(x: 0, y: 41, width: self.view.frame.size.width, height: self.view.frame.size.height))
+        //回転させた場合のframe調整
+        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         //WKWebViewをViewControllerのviewに追加する
         view.addSubview(webView)
         //リクエストを生成

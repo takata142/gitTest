@@ -17,17 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iIf-7Y-lBf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iIf-7Y-lBf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
                                 <color key="backgroundColor" red="0.40570938999803419" green="0.40502504767645819" blue="0.41697880344147964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jge-gz-7mc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jge-gz-7mc" secondAttribute="height" multiplier="69:142" id="tbP-Nn-Pwz"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jge-gz-7mc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I02-Db-QVC"/>
+                            <constraint firstItem="iIf-7Y-lBf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f9y-m2-sUu"/>
+                            <constraint firstItem="iIf-7Y-lBf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j85-8d-hTj"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="view" destination="iIf-7Y-lBf" id="RdA-UA-bAr"/>
+                        <outlet property="view2" destination="Jge-gz-7mc" id="av2-mn-J5I"/>
                     </connections>
                 </viewController>
             </objects>
